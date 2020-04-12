@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Specify your age</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script type="text/javascript">
+	
+	function Check(){
+
+		if (document.getElementById("male").checked == true){
+			//MALE checking--------------------------------------------------------------------
+			var a=document.getElementById("n").value;
+			var y= 18;
+				if (a < 18) {
+					y = y - a;
+					document.getElementById("a").innerHTML+="We will call you in " + y + " year(s)";
+
+				}else{
+					if (a > 60) {
+						document.getElementById("a").innerHTML="Age value is out of range ";
+					}else{
+						document.getElementById("a").innerHTML="We will call you back ";	
+					}
+				}
+
+		} else {
+			//FEMALE checking-----------------------------------------------------------------
+			var a=document.getElementById("n").value;
+			var y= 21;
+				if (a < 21) {
+					y = y - a;
+					document.getElementById("a").innerHTML="We will call you in "+ y + " year(s)";
+				}else{
+					if (a > 55) {
+						document.getElementById("a").innerHTML="Age value is out of range ";
+					}else{
+							document.getElementById("a").innerHTML="We will call you back ";	
+					}
+				}
+		}
+	}
+
+	</script>
+
+	
+
+</head>
+
+	<body> 
+		<h1>Specify your age</h1>
+			
+			<p>Enter your age please:
+			<input id="n" placeholder="1" type="number" min="1" max="99" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />
+
+			<!-- <input type="number" name="age" id="n" placeholder="1" min="1" max="99" maxlength="2" required><br> -->
+			</p>
+
+			<p>
+			Sex:
+			<input type="radio" id="male" name="gender" value="male" required>
+  			<label for="male">Male</label>
+  			<input type="radio" id="female" name="gender" value="female" required>
+ 			<label for="female">Female</label>
+			<p>
+
+  		<button type="Submit" id="b" onclick="Check()">Submit</button>
+  		<a id="a"></a>
+  		
+	</body>
+
+</html>
+

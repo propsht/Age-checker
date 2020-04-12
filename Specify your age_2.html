@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Specify your age</title>
+	
+	<script type="text/javascript">
+	function validation(){
+			
+			if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) ) {
+		
+				alert ("MALE");
+			} else {
+				alert ("FEMALE");
+			}
+		}
+
+
+
+
+		
+		</script>
+	
+</head>
+
+	<body> 
+		<h1>Specify your age</h1>
+		
+		<form >
+			<p>Enter your age please:
+			<input type="number" name="age" id="number" placeholder="1" title="Минимальное значение 18, максимальное 99" min="1" max="99" required><br>
+			</p>
+		
+			<p>
+			Sex:
+			<input type="radio" id="male" name="gender" value="male" >
+  			<label for="male">Male</label>
+  			<input type="radio" id="female" name="gender" value="female" >
+ 			<label for="female">Female</label>
+			<p>
+  			
+
+  		<button onclick="validation()">Submit</button>
+  		<a id="a"></a>
+		</form> 	
+
+		
+	</body>
+
+</html>
+
